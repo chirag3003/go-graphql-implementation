@@ -1,0 +1,22 @@
+type Query {
+    placeholder: String
+    books: [Book!]
+}
+
+type Time {
+    unixTime: Int!
+    timeStamp: String!
+}
+
+type Book {
+    title: String!
+}
+
+type Subscription {
+    currentTime: Time!
+    books: [Book!]!
+}
+
+type Mutation {
+    addBook(title: String!): Book!
+}
